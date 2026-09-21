@@ -74,40 +74,67 @@ match (menu_prompt):
     case 2 : 
         print("Messages")
         messages = """
-1. Set 12
-2. Common 3
-"""     
+1. Write messages
+2. Inbox
+3. Outbox
+4. Picture messages
+5. Templates
+6. Smileys
+7. Message settings
+8. Info service
+9. Voice mailbox number 4
+10. Service command editor
+0. Back
+                """
         print(messages)
         messages_prompt = int(input("Choose an option:"))
         match (messages_prompt):
-            case 1 : 
-                print("Set 12")
-                set_1 = """
-1. Message centre number
-2. Messages sent as
-3. Message validity
-                """
-                print(set_1)
-                set_1_prompt = int(input("Choose an option:"))
-                match (set_1_prompt):
-                    case 1 : print("Search")
-                    case 2 : print("Messages sent as")
-                    case 3 : print("Message validity")
-                    case _ : print("Invalid Input")
-            case 2 :    
-                print("Common 3")
-                common_3 = """
-1. Delivery reports
-2. Reply via same centre
-3. Character support
-                """
-                print(common_3)
-                common_3_prompt = int(input("Choose an option:"))
-                match (common_3_prompt):
-                    case 1 : print("Delivery reports")
-                    case 2 : print("Reply via same centre")
-                    case 3 : print("Character support")
-                    case _ : print("Invalid Input")
+            case 1 : print("Write messages")
+            case 2 : print("Inbox")
+            case 3 : print("Outbox")
+            case 4 : print("Picture messages")
+            case 5 : print("Templates")
+            case 6 : print("Smileys")
+            case 7 : 
+                print("Message settings")
+                messages_settings = """
+1. Set 12
+2. Common 3
+    """     
+                print(messages_settings)
+                messages_settings_prompt = int(input("Choose an option:"))
+                match (messages_settings_prompt):
+                    case 1 : 
+                        print("Set 12")
+                        set_1 = """
+    1. Message centre number
+    2. Messages sent as
+    3. Message validity
+                        """
+                        print(set_1)
+                        set_1_prompt = int(input("Choose an option:"))
+                        match (set_1_prompt):
+                            case 1 : print("Search")
+                            case 2 : print("Messages sent as")
+                            case 3 : print("Message validity")
+                            case _ : print("Invalid Input")
+                    case 2 :    
+                        print("Common 3")
+                        common_3 = """
+    1. Delivery reports
+    2. Reply via same centre
+    3. Character support
+                        """
+                        print(common_3)
+                        common_3_prompt = int(input("Choose an option:"))
+                        match (common_3_prompt):
+                            case 1 : print("Delivery reports")
+                            case 2 : print("Reply via same centre")
+                            case 3 : print("Character support")
+                            case _ : print("Invalid Input")
+            case 8 : print("Info service")
+            case 9 : print("Voice mailbox number 4")
+            case 10 : print("Service command editor")
             case _ : print("Invalid Input")        
     case 3 : print("Chat")
     case 4 : 
